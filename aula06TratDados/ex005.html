@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro passos com DOM</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            color: black;
+            font: normal 18pt Arial;            
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM(Document Object Model)</h1>
+    <P>Aqui vai o resultado</P>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <div class="msg">Testando o getElement por Classe</div>
+    <div name="msg">Testando o getElements por Nome</div>
+    <div id="msg2">Utilizando os querySelector</div>
+    <script>
+        var corpo = window.document.body // Variável para alterações das cores
+        var p1 = window.document.getElementsByTagName('p')[0] // Para selecionar o primeiro paragrafo.
+        window.document.write(p1.innerText, '</br>') // Escreve o texto do primeiro parágrafo.
+        corpo.style.background = 'green' // Muda a cor de fundo
+        p1.style.color = 'yellow' // Muda a cor do primeiro paragrafo  
+        
+        var p2 = window.document.getElementsByTagName('p')[1] // Seleciona o segundo paragrafo
+        document.write(p2.innerText, '</br>') // Escreve o texto sem a formatação.
+        document.write(p2.innerHTML) // Escreve o texto com formatação.
+
+        var d = window.document.getElementById('msg') // Para selecionar a div nomeada com Id
+        d.style.background = 'blue' // Colore a cor da div
+        d.innerText = 'Estou aguardando...' // Texto da div alterado
+        d.style.color = 'white' // Muda a cor do texto
+
+        var d2 = window.document.getElementsByClassName('msg')[0]
+        d2.innerText = 'Testando por classe'
+        d2.style.color = 'aqua'
+
+        var d3 = window.document.getElementsByName('msg')[0]
+        d3.innerText = 'Testando por Nome'
+        d3.style.color = 'yellow'
+
+        var d4 = window.document.querySelector('div#msg2') // Caso a div fosse class usaria div.msg2
+        d4.style.color = 'orange'
+    </script>  
+</body>
+</html>
+<!--
+    Arvore DOM:
+    - window: (Janela do Navegador)
+    . location => Localização do site (Diz qual é a url, pagina atual ou anterior)
+    . document => Documento atual
+        - html:
+         . head:
+           . meta
+           . title
+         . body
+            . h1
+            . p
+            . p:
+             . strong
+            . div
+    . history => Guarda os caminhos no site
+
+    Selecionando os elementos:
+    - por marca
+    - por ID
+    - por Nome
+    - Por Classe
+    - por Seletor
+
+    Toda div é representada por #
+    quando é class representa po .
+-->

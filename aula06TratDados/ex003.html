@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Exercício JavaScript</title>
+    <style>
+        body {
+            background-color: aqua;
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1> Olá, Mundo! </h1>   
+    <p>Já me livrei da maldição.</p> 
+<!--Criando JavaScript-->
+<script>
+    var n1 = Number.parseInt(window.prompt('Digite um número: ')) // O 'PROMPT' retorna os dados como string
+    var n2 = Number.parseInt(window.prompt('Digite outro número: ')) // 'Number.parseInt converte os valores em inteiros'
+    var s = n1 + n2
+    window.alert('A soma dos valores é: ' + s) // O '+' funciona como concatenação
+    // (number + number) funciona como ADIÇÃO.
+    // (string + string) funciona como CONCATENAÇÃO.
+</script>
+<!--UTILIZANDO SÓ O 'NUMBER' PARA CONVERTER AS STRINGS-->
+<script>
+    var n2 = Number(window.prompt('Digite um valor: '))
+    var n3 = Number(window.prompt('Digite outro valor: '))
+    var s2 = n2 + n3
+    window.alert('A soma dos números é: ' + s2)
+</script>
+<!--Utlizando os PLACE HOLDS-->
+    <script>
+        var n4 = Number(window.prompt('Digite um número: '))
+        var n5 = Number(window.prompt('Digite outro valor: '))
+        var s = n4 + n5
+        window.alert(`A soma entre ${n4} e ${n5} é: ${s}`) // Nesse caso foi usado as crases.
+    </script>
+</body>
+</html>

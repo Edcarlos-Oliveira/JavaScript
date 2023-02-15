@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Parte 1</title>
+</head>
+<body>
+    <p>Operadores Parte 1:
+        <ul>
+            <li>Aritiméticos => (+, -, *, /, % e **), Ordem de Prescedência ('(), **, *, /, %, +, -')</li><!--Respectivamente, (soma, menos, multiplicação, dividir, resto divisão inteira, potência)-->
+            <li>Atribuição => Exemplo:
+                <script>
+                    
+                    var a = 5 + 3
+                    window.alert('Valor = ' + a) //Resultado = 8.
+                    var b = a % 5
+                    window.alert('Valor = ' + b) // Resultado = 3 (resto da divisão)
+                    var c = 5 * b ** 2 
+                    window.alert('Valor = ' + c) // Resultado = 45 (primeiro a potenciação e depois a multiplicação)
+                    var d = 10-a/2
+                    window.alert('Valor = ' + d) // Resultado = 6 (Primeiro a divisão)
+                    var e = 6*2/d
+                    window.alert('Valor = ' + e) // Resultado = 2 (Primeiro a multiplicação e depois a divisão)
+                    var f = b % e + 4 / e
+                    window.alert('Valor = ' + f) // Resultado = 3 (Primeiro o resto da divisão, depois divisão e depois) 
+                </script>
+            
+            </li>
+            <li>Incremento => (Exemplo 'n++' incrementa 1 ao valor, 'n--' retira 1  </li>
+            <li>Pré Incremento => (Exemplo: '++n' incrementa antes, '--n' retira antes.</li>
+        </ul>
+    </p>
+</body>
+</html>
